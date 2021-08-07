@@ -1,0 +1,25 @@
+code runner
+
+scroll en keyboard shortcuts
+
+KITE
+
+
+pildoras informaticas -> curso python desde 0
+		-> curso Django
+codigo facilito -> flask
+
+
+
+pip install flask flask_cors
+
+
+elementTree
+root = ET.fromstring(xml)
+
+
+cada vez qye se mueve un dato se vuelve byte
+es necesario decodificar siempre
+
+utf-8
+
