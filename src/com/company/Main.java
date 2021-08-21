@@ -7,6 +7,9 @@ public class Main {
     public static void main(String[] args) {
 
 
+    	Refuerzo_30_08_2021 ref = new Refuerzo_30_08_2021();
+    	ref.getClass();
+
 
 		Scanner scc = new Scanner(System.in);
 		Scanner sc1 = new Scanner(System.in);
