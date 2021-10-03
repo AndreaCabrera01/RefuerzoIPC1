@@ -12,11 +12,15 @@ public class Interfaz extends JFrame implements ActionListener{
     JButton tirar;
     JLabel perrito;
 
+    public static Point location = new Point(0,0);
+
     public static Hueso hueso;
+    public static Perro perro;
     public static int x, y;
 
     public Interfaz(){
         hueso = new Hueso();
+
 
         this.setTitle("Juego del Perrito");
         this.setBounds(400, 250, 1200, 600);
@@ -32,15 +36,14 @@ public class Interfaz extends JFrame implements ActionListener{
         tirar.addActionListener(this);
 
         //------------LABELS DEL PERRITO---------------
-        perrito = new JLabel(new ImageIcon("perro.png"));
-        perrito.setSize(128, 128);
-        perrito.setLocation(20,500);
+        perro = new Perro(location);
+        perro.setLocation(0,0);
 
         this.add(tirar);
-        this.add(perrito);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     }
+
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -50,6 +53,20 @@ public class Interfaz extends JFrame implements ActionListener{
             y = (int) (random.nextDouble() * 472);
             hueso.setLocation(x,y);
             this.add(hueso);
+
+
+            this.add(perro);
+
+            Thread hilo = new Thread(perro);
+            hilo.start();
+
+            hilo.isAlive()
+
+
+
+
+
+
         }
     }
 }
